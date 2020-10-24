@@ -19,7 +19,7 @@ jobs:
     - name: "Build"
       run: npm run build
     - name: "Publish to NPM"
-      uses: JS-DevTools/npm-publish@1
+      uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
     - name: "Report coverage"
