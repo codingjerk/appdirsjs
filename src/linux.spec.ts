@@ -10,10 +10,10 @@ test("It uses XDG default paths", () => {
 });
 
 test("It uses XDG variables if setted", () => {
-  process.env.XDG_CACHE_HOME = "/tmp/cache";
-  process.env.XDG_CONFIG_HOME = "/home/user/config";
-  process.env.XDG_DATA_HOME = "/home/user/.data";
-  process.env.XDG_RUNTIME_DIR = "/tmp/user-1000";
+  Object.defineProperty(process.env, "XDG_CACHE_HOME", { value: "/tmp/cache" });
+  Object.defineProperty(process.env, "XDG_CONFIG_HOME", { value: "/home/user/config" });
+  Object.defineProperty(process.env, "XDG_DATA_HOME", { value: "/home/user/.data" });
+  Object.defineProperty(process.env, "XDG_RUNTIME_DIR", { value: "/tmp/user-1000" });
   const d = appDirs({appName: "zsh"});
 
   expect(d.cache).toBe("/tmp/cache/zsh");
