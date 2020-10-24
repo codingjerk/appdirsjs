@@ -10,10 +10,10 @@ test("It uses XDG default paths", () => {
 });
 
 test("It uses XDG variables if setted", () => {
-  Object.defineProperty(process.env, "XDG_CACHE_HOME", { value: "/tmp/cache" });
-  Object.defineProperty(process.env, "XDG_CONFIG_HOME", { value: "/home/user/config" });
-  Object.defineProperty(process.env, "XDG_DATA_HOME", { value: "/home/user/.data" });
-  Object.defineProperty(process.env, "XDG_RUNTIME_DIR", { value: "/tmp/user-1000" });
+  process.env.XDG_CACHE_HOME = "/tmp/cache";
+  process.env.XDG_CONFIG_HOME = "/home/user/config";
+  process.env.XDG_DATA_HOME = "/home/user/.data";
+  process.env.XDG_RUNTIME_DIR = "/tmp/user-1000";
   const d = appDirs({appName: "zsh"});
 
   expect(d.cache).toBe("/tmp/cache/zsh");
@@ -37,25 +37,15 @@ import * as fs from "fs";
 
 type TestContext = {
   original_platform: string,
-
-  original_cache_home?: string,
-  original_config_home?: string,
-  original_data_home?: string,
-  original_runtime_dir?: string,
+  original_env: any,
 };
 
 beforeEach(function(this: TestContext) {
   this.original_platform = process.platform;
-  this.original_cache_home = process.env.XDG_CACHE_HOME;
-  this.original_config_home = process.env.XDG_CONFIG_HOME;
-  this.original_data_home = process.env.XDG_DATA_HOME;
-  this.original_runtime_dir = process.env.XDG_RUNTIME_DIR;
+  this.original_env = process.env;
 
   Object.defineProperty(process, "platform", { value: "linux" });
-  Object.defineProperty(process.env, "XDG_CACHE_HOME", { value: undefined });
-  Object.defineProperty(process.env, "XDG_CONFIG_HOME", { value: undefined });
-  Object.defineProperty(process.env, "XDG_DATA_HOME", { value: undefined });
-  Object.defineProperty(process.env, "XDG_RUNTIME_DIR", { value: undefined });
+  Object.defineProperty(process, "env", { value: {} });
 
   jest.spyOn(os, "homedir").mockReturnValue("/home/user");
   jest.spyOn(process, "getuid").mockReturnValue(1000);
@@ -64,10 +54,7 @@ beforeEach(function(this: TestContext) {
 
 afterEach(function(this: TestContext) {
   Object.defineProperty(process, "platform", { value: this.original_platform });
-  Object.defineProperty(process.env, "XDG_CACHE_HOME", { value: this.original_cache_home });
-  Object.defineProperty(process.env, "XDG_CONFIG_HOME", { value: this.original_config_home });
-  Object.defineProperty(process.env, "XDG_DATA_HOME", { value: this.original_data_home });
-  Object.defineProperty(process.env, "XDG_RUNTIME_DIR", { value: this.original_runtime_dir });
+  Object.defineProperty(process, "env", { value: this.original_env });
 
   jest.spyOn(os, "homedir").mockRestore();
   jest.spyOn(fs, "existsSync").mockRestore();
