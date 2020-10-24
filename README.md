@@ -1,13 +1,9 @@
 # appdirsjs
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/codingjerk/appdirsjs/ci)
-
 ![Codecov](https://img.shields.io/codecov/c/gh/codingjerk/appdirsjs)
-
 ![npm](https://img.shields.io/npm/v/appdirsjs)
-
 ![npm bundle size](https://img.shields.io/bundlephobia/min/appdirsjs)
-
 ![GitHub](https://img.shields.io/github/license/codingjerk/appdirsjs)
 
 A node.js library to get paths to directories to store configs, caches and data according to OS standarts.
