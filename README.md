@@ -2,7 +2,7 @@
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/codingjerk/appdirsjs/ci)
 
-![Codecov](https://img.shields.io/codecov/c/gh/codingjerk/appdirsjs?token=123)
+![Codecov](https://img.shields.io/codecov/c/gh/codingjerk/appdirsjs)
 
 ![npm](https://img.shields.io/npm/v/appdirsjs)
 
@@ -72,7 +72,6 @@ console.log(dirs.config);
 
 ## TODO
 
-- [ ] GitHub actions integration and codecov
 - [ ] Android support
 - [ ] MacOS support
 - [ ] Windows support
