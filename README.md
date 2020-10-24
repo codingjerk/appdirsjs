@@ -6,6 +6,7 @@ A node.js library to get paths to directories to store configs, caches and data 
 
 ```sh
 npm install app-dirs
+```
 
 or
 
