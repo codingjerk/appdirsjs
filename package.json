@@ -1,6 +1,6 @@
 {
-  "name": "app-dirs",
-  "version": "0.0.1",
+  "name": "appdirsjs",
+  "version": "1.0.0",
   "description": "OS-dependent application paths for cache, data and config directories",
   "keywords": [],
   "license": "MIT",
@@ -8,7 +8,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/codingjerk/app-dirs"
+    "url": "https://github.com/codingjerk/appdirsjs"
   },
   "scripts": {
     "build": "tsc",

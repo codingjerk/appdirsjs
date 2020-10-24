@@ -1,27 +1,27 @@
-# app-dirs
+# appdirsjs
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/codingjerk/app-dirs/ci)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/codingjerk/appdirsjs/ci)
 
-![Codecov](https://img.shields.io/codecov/c/gh/codingjerk/app-dirs?token=123)
+![Codecov](https://img.shields.io/codecov/c/gh/codingjerk/appdirsjs?token=123)
 
-![npm](https://img.shields.io/npm/v/app-dirs)
+![npm](https://img.shields.io/npm/v/appdirsjs)
 
-![npm bundle size](https://img.shields.io/bundlephobia/min/app-dirs)
+![npm bundle size](https://img.shields.io/bundlephobia/min/appdirsjs)
 
-![GitHub](https://img.shields.io/github/license/codingjerk/app-dirs)
+![GitHub](https://img.shields.io/github/license/codingjerk/appdirsjs)
 
 A node.js library to get paths to directories to store configs, caches and data according to OS standarts.
 
 ## Installation
 
 ```sh
-npm install app-dirs
+npm install appdirsjs
 ```
 
 or
 
 ```sh
-yarn install app-dirs
+yarn install appdirsjs
 ```
 
 if you're using yarn.
@@ -29,7 +29,7 @@ if you're using yarn.
 ## Usage
 
 ```javascript
-import appDirs from "app-dirs";
+import appDirs from "appdirsjs";
 
 const dirs = appDirs({ app: "expo" });
 
@@ -58,7 +58,7 @@ to keep using old directory if it exists:
 
 ```javascript
 import * as path from "path";
-import appDirs from "app-dirs";
+import appDirs from "appdirsjs";
 
 const dirs = appDirs({
   app: "expo",

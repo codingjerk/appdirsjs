@@ -49,7 +49,7 @@ export default function appDirs(options: Options): Directories {
 }
 
 function fallback({ appName, legacyPath }: Options): Directories {
-  console.warn(`[app-dirs]: can't get directories for "${process.platform}" platform, using fallback values`)
+  console.warn(`[appdirsjs]: can't get directories for "${process.platform}" platform, using fallback values`)
 
   function fallbackPath() {
     if (legacyPath) {
