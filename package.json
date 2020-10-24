@@ -1,5 +1,5 @@
 {
-  "name": "app-paths",
+  "name": "app-dirs",
   "version": "0.0.1",
   "description": "OS-dependent application paths for cache, data and config directories",
   "keywords": [],
@@ -8,7 +8,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/codingjerk/app-paths"
+    "url": "https://github.com/codingjerk/app-dirs"
   },
   "scripts": {
     "build": "tsc",

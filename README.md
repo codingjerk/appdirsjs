@@ -1,4 +1,4 @@
-# app-paths
+# app-dirs
 
 A node.js library to get paths to directories to store configs, caches and data according to OS standarts.
 
