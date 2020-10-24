@@ -12,7 +12,6 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run test && npm run build",
     "lint": "eslint src/**/*.ts",
     "test": "jest --coverage"
   },
