@@ -70,4 +70,3 @@ console.log(dirs.config);
 
 - [ ] Android support
 - [ ] MacOS support
-- [ ] Windows support
