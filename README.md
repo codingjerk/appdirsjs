@@ -31,17 +31,17 @@ const dirs = appDirs({ app: "expo" });
 
 console.log(dirs.cache);
 // /home/user/.cache/expo on Linux
-// /home/User/Library/Caches/expo on MacOS
+// /Users/User/Library/Caches/expo on MacOS
 // C:\Users\User\AppData\Local\Temp\expo on Windows
 
 console.log(dirs.config);
 // /home/user/.config/expo on Linux
-// /home/User/Library/Preferences/expo on MacOS
+// /Users/User/Library/Preferences/expo on MacOS
 // C:\Users\User\AppData\Roaming\expo
 
 console.log(dirs.data);
 // /home/user/.local/share/expo on Linux
-// /home/User/Library/Application Support/expo on MacOS
+// /Users/User/Library/Application Support/expo on MacOS
 // C:\Users\User\AppData\Local\expo
 ```
 
@@ -70,4 +70,3 @@ console.log(dirs.config);
 
 - [ ] Android support
 - [ ] XDG on BSD support
-- [ ] MacOS support

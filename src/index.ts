@@ -45,6 +45,8 @@ export default function appDirs(options: Options): Directories {
     return linux(options);
   } else if (process.platform === "win32") {
     return windows(options);
+  } else if (process.platform === "darwin") {
+    return macos(options);
   }
 
   return fallback(options)
@@ -112,5 +114,22 @@ function windows({ appName, legacyPath }: Options): Directories {
     cache: path.join(localAppData, "Temp", appName),
     config: path.join(roamingAppData, appName),
     data: path.join(localAppData, appName),
+  });
+}
+
+function macos({ appName, legacyPath }: Options): Directories {
+  if (legacyPath && fs.existsSync(legacyPath)) {
+    return Object.freeze({
+      cache: legacyPath,
+      config: legacyPath,
+      data: legacyPath,
+    });
+  }
+
+  const home = os.homedir();
+  return Object.freeze({
+    cache: path.join(home, "Library", "Caches", appName),
+    config: path.join(home, "Library", "Preferences", appName),
+    data: path.join(home, "Library", "Application Support", appName),
   });
 }
