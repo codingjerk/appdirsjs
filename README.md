@@ -32,7 +32,7 @@ const dirs = appDirs({ app: "expo" });
 console.log(dirs.cache);
 // /home/user/.cache/expo on Linux
 // /home/User/Library/Caches/expo on MacOS
-// C:\User\User\AppData\Local\Temp on Windows
+// C:\Users\User\AppData\Local\Temp\expo on Windows
 
 console.log(dirs.config);
 // /home/user/.config/expo on Linux
@@ -69,5 +69,5 @@ console.log(dirs.config);
 ## TODO
 
 - [ ] Android support
+- [ ] XDG on BSD support
 - [ ] MacOS support
-- [ ] Windows support

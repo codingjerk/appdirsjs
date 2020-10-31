@@ -43,6 +43,8 @@ type Directories = {
 export default function appDirs(options: Options): Directories {
   if (process.platform === "linux") {
     return linux(options);
+  } else if (process.platform === "win32") {
+    return windows(options);
   }
 
   return fallback(options)
@@ -90,5 +92,25 @@ function linux({ appName, legacyPath }: Options): Directories {
     config: xdgPath(true, env.XDG_CONFIG_HOME, path.join(home, ".config")),
     data: xdgPath(true, env.XDG_DATA_HOME, path.join(home, ".local", "share")),
     runtime: xdgPath(false, env.XDG_RUNTIME_DIR, path.join("/run", "user", uid.toString())),
+  });
+}
+
+function windows({ appName, legacyPath }: Options): Directories {
+  if (legacyPath && fs.existsSync(legacyPath)) {
+    return Object.freeze({
+      cache: legacyPath,
+      config: legacyPath,
+      data: legacyPath,
+    });
+  }
+
+  const home = os.homedir();
+  const roamingAppData = process.env.APPDATA || path.join(home, "AppData", "Roaming");
+  const localAppData = process.env.LOCALAPPDATA || path.join(home, "AppData", "Local");
+
+  return Object.freeze({
+    cache: path.join(localAppData, "Temp", appName),
+    config: path.join(roamingAppData, appName),
+    data: path.join(localAppData, appName),
   });
 }
