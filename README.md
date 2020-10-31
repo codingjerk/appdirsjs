@@ -27,7 +27,7 @@ if you're using yarn.
 ```javascript
 import appDirs from "appdirsjs";
 
-const dirs = appDirs({ app: "expo" });
+const dirs = appDirs({ appName: "expo" });
 
 console.log(dirs.cache);
 // /home/user/.cache/expo on Linux
@@ -57,7 +57,7 @@ import * as path from "path";
 import appDirs from "appdirsjs";
 
 const dirs = appDirs({
-  app: "expo",
+  appName: "expo",
   // Notice usage of full path
   legacyPath: path.join(os.homedir(), ".expo"),
 });
