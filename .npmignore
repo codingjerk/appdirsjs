@@ -1,3 +1,10 @@
+.codecov.yml
+.editorconfig
+.eslintrc.js
+.github
 coverage
+_*.md
+dist/*.spec.*
+jest.config.js
 src
 tsconfig.json
