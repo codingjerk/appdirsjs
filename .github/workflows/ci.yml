@@ -13,11 +13,11 @@ jobs:
     - name: "Install dependencies"
       run: npm install
     - name: "Lint"
-      run: npm run lint
+      run: make lint
     - name: "Test"
-      run: npm run test
+      run: make test
     - name: "Build"
-      run: npm run build
+      run: make dist
     - name: "Publish to NPM"
       uses: JS-DevTools/npm-publish@v1
       with:

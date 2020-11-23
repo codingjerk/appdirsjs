@@ -1,22 +1,14 @@
 {
   "name": "appdirsjs",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "OS-dependent application paths for cache, data and config directories",
-  "keywords": [],
   "license": "MIT",
-  "author": "Denis Gruzdev <codingjerk@gmail.com>",
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/codingjerk/appdirsjs"
-  },
-  "scripts": {
-    "build": "tsc",
-    "lint": "eslint src/**/*.ts",
-    "test": "jest --coverage"
-  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.js"
+  ],
   "devDependencies": {
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
