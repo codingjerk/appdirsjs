@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist/index.js",
-    "dist/index.d.js"
+    "dist/index.d.ts"
   ],
   "devDependencies": {
     "@types/jest": "^26.0.15",
