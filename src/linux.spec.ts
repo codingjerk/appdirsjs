@@ -32,6 +32,15 @@ test("It uses legacy path if exists", () => {
   expect(d.runtime).toBe("/run/user/1000/expo");
 });
 
+test("It uses 'unknown-uid' if there is no process.getuid", () => {
+  const original_getuid = process.getuid;
+  Object.defineProperty(process, "getuid", { value: undefined });
+  const d = appDirs({appName: "zathura"});
+  Object.defineProperty(process, "getuid", { value: original_getuid });
+
+  expect(d.runtime).toBe("/run/user/unknown-uid/zathura");
+});
+
 import * as os from "os";
 import * as fs from "fs";
 

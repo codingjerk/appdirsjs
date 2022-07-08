@@ -73,8 +73,10 @@ function fallback({ appName, legacyPath }: Options): Directories {
 
 function linux({ appName, legacyPath }: Options): Directories {
   const home = os.homedir();
-  const uid = process.getuid();
   const env = process.env;
+  const uid = (process.getuid !== undefined)
+    ? process.getuid()
+    : "unknown-uid";
 
   function xdgPath(
     allowLegacy: boolean,
