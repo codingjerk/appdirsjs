@@ -1,6 +1,6 @@
 # appdirsjs
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/codingjerk/appdirsjs/ci)](https://github.com/codingjerk/appdirsjs/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/codingjerk/appdirsjs/ci.yml)](https://github.com/codingjerk/appdirsjs/actions)
 [![Codecov](https://img.shields.io/codecov/c/gh/codingjerk/appdirsjs)](https://codecov.io/gh/codingjerk/appdirsjs)
 [![npm](https://img.shields.io/npm/v/appdirsjs)](https://www.npmjs.com/package/appdirsjs)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/appdirsjs)](https://www.npmjs.com/package/appdirsjs)
