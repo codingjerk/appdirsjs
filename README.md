@@ -6,7 +6,7 @@
 [![npm bundle size](https://img.shields.io/bundlephobia/min/appdirsjs)](https://www.npmjs.com/package/appdirsjs)
 [![GitHub](https://img.shields.io/badge/license-MIT-blue)](https://github.com/codingjerk/appdirsjs/blob/master/_LICENSE.md)
 
-A node.js library to get paths to directories to store configs, caches and data according to OS standarts.
+A node.js library to get paths to directories to store configs, caches and data according to OS standards.
 
 ## Installation
 
