@@ -74,3 +74,6 @@ console.log("Configuration Directory:", dirs.config);
 
 - [ ] Android support
 - [ ] XDG on BSD support
+- [ ] CI tests on `bun` and `deno`
+- [ ] Dev dependencies update
+- [ ] README.md cleanup
