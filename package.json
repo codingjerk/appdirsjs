@@ -3,6 +3,16 @@
   "version": "1.2.7",
   "description": "OS-dependent application paths for cache, data and config directories",
   "license": "MIT",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/codingjerk"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/codingjerk"
+    }
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
