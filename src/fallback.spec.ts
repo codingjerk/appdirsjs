@@ -4,7 +4,7 @@ let warn_mock: jest.SpyInstance;
 
 test("It generates warning on unknown OS", () => {
   appDirs({appName: "zathura"});
-  expect(warn_mock).toBeCalled();
+  expect(warn_mock).toHaveBeenCalled();
 });
 
 test("It provides fallback paths on unknown OS", () => {
@@ -21,7 +21,7 @@ test("It returns legacy path on unknown OS if provided (even if it does not exis
   expect(d.cache).toEqual("/nonexistent/path/zathura");
 });
 
-import * as os from "os";
+import os from "os";
 
 type TestContext = {
   original_platform: string,

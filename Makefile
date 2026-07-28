@@ -1,3 +1,5 @@
+.PHONY: all dist lint test
+
 all: lint test dist
 
 dist:

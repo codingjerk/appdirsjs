@@ -41,12 +41,12 @@ test("It uses 'unknown-uid' if there is no process.getuid", () => {
   expect(d.runtime).toBe("/run/user/unknown-uid/zathura");
 });
 
-import * as os from "os";
-import * as fs from "fs";
+import os from "os";
+import fs from "fs";
 
 type TestContext = {
   original_platform: string,
-  original_env: any,
+  original_env: NodeJS.ProcessEnv,
 };
 
 beforeEach(function(this: TestContext) {

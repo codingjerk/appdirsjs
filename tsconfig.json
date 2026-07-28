@@ -4,6 +4,8 @@
     "target": "es2015",
     "declaration": true,
     "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["jest", "node"],
 
     "strict": true,
     "noFallthroughCasesInSwitch": true,
