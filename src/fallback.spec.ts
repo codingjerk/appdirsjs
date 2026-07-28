@@ -15,10 +15,10 @@ test("It provides fallback paths on unknown OS", () => {
   expect(d.data).toEqual("/home/user/.zathura");
 });
 
-test("It returns legacy path on unknown OS if provided (even if not existed)", () => {
-  const d = appDirs({appName: "zathura", legacyPath: "/not/existed/path/zathura"});
+test("It returns legacy path on unknown OS if provided (even if it does not exist)", () => {
+  const d = appDirs({appName: "zathura", legacyPath: "/nonexistent/path/zathura"});
 
-  expect(d.cache).toEqual("/not/existed/path/zathura");
+  expect(d.cache).toEqual("/nonexistent/path/zathura");
 });
 
 import * as os from "os";

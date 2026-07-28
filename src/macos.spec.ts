@@ -1,6 +1,6 @@
 import appDirs from "./index";
 
-test("It uses XDG default paths", () => {
+test("It uses macOS default paths", () => {
   const d = appDirs({appName: "python"});
 
   expect(d.cache).toBe("/Users/User/Library/Caches/python");

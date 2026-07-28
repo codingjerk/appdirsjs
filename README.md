@@ -6,7 +6,7 @@
 [![npm bundle size](https://img.shields.io/bundlephobia/min/appdirsjs)](https://www.npmjs.com/package/appdirsjs)
 [![GitHub](https://img.shields.io/badge/license-MIT-blue)](https://github.com/codingjerk/appdirsjs/blob/master/_LICENSE.md)
 
-A lightweight Node.js library providing standardized paths for directories to store configs, caches, and data files according to OS standards. On Linux it's following XDG Base Directory Specification. On MacOS and Windows it's following Apple and Microsoft guidelines.
+A lightweight Node.js library providing standardized paths for directories to store configs, caches, and data files according to OS standards. On Linux, it follows the XDG Base Directory Specification. On macOS and Windows, it follows Apple and Microsoft guidelines.
 
 ## Installation
 
@@ -19,7 +19,7 @@ npm install appdirsjs
 Or if you use Yarn:
 
 ```sh
-yarn install appdirsjs
+yarn add appdirsjs
 ```
 
 ## Usage
@@ -50,10 +50,10 @@ console.log("Data Directory:", dirs.data);
 
 ### Keep backward compatibility
 
-Then switching from old-style dotfile directory,
-such as `~/.myapp` to new, like `~/.config/myapp`,
-you can pass `legacyPath` parameter
-to keep using old directory if it exists:
+When switching from an old-style dotfile directory,
+such as `~/.myapp`, to a new one, like `~/.config/myapp`,
+you can pass the `legacyPath` parameter
+to keep using the old directory if it exists:
 
 ```javascript
 import * as os from "os";

@@ -9,7 +9,7 @@ test("It uses XDG default paths", () => {
   expect(d.runtime).toBe("/run/user/1000/chromium");
 });
 
-test("It uses XDG variables if setted", () => {
+test("It uses XDG variables if set", () => {
   process.env.XDG_CACHE_HOME = "/tmp/cache";
   process.env.XDG_CONFIG_HOME = "/home/user/config";
   process.env.XDG_DATA_HOME = "/home/user/.data";

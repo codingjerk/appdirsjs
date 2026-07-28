@@ -2,9 +2,9 @@
 
 Thank you for investing your time in contributing to the project!
 
-Algorithm of making contribution is following:
+The contribution process is as follows:
 
-1. Do your changes
-2. Make sure tests are passed with `make test`
-3. Make sure code is formatted correctly with `make lint`
-4. Create pull request
+1. Make your changes
+2. Make sure tests pass with `make test`
+3. Make sure the code is formatted correctly with `make lint`
+4. Create a pull request
